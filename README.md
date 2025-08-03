@@ -15,7 +15,7 @@
 * Alpine Linux
 * 
   ```bash
-  sudo apk update && sudo apk add python3 py3-pip nano
+  sudo apk update && sudo apk add python3 py3-pip git nano
   ```
   
 ### Bước 2 Clone repo này:
