@@ -9,7 +9,7 @@
   ```bash
   sudo pacman -Syu && sudo pacman -S git python python-pip nano
   ```
-  * Alpine Linux
+* Alpine Linux
   ```bash
   sudo apk update && sudo apk add python3 py3-pip nano```
   
@@ -41,3 +41,5 @@ python3 bot.py
  ## CREDIT:
  * ĐINH ĐỨC TRÍ
  * EMAIL: dinhductri2023@gmail.com
+ ## NOTE:
+ Bài học rút ra: làm cái này hao mòn Tay tay vãi :)))
