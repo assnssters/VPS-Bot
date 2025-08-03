@@ -1,8 +1,9 @@
+# @ CODE BY TRI GAY & MOT CHUT CHATGPT :))
 import telebot, subprocess, psutil, platform, socket, requests, os, ctypes, signal, sys, time
 from datetime import datetime
 
-TOKEN = '7625947522:AAGeun6V3Bve1_-_164CDDFhbyxv0GAxhUE'
-OWNER_ID = -1002595981657
+TOKEN = 'TELEGRAM_BOT_ID'
+OWNER_ID = YOUR_CHAT_IF
 
 bot = telebot.TeleBot(TOKEN)
 PC_NAME = platform.node()
