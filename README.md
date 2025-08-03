@@ -21,8 +21,11 @@
 ```bash
 git clone https://github.com/assnssters/VPS-Bot.git
 ```
+#### Tải Modules cần thiết
 
-
+```bash
+pip install -r VPS-Bot/requirements.txt
+```
 ### Bước 3 cấu hình vào Bot:
 
 
