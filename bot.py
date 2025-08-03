@@ -105,7 +105,7 @@ if platform.system() == "Linux":
  def upload(message):
      full = message.text.replace('/upload ', '', 1).strip()
      path = full.split()[-1]
-     secret = result = response.text.split()[1]
+     secret = full.split()[1]
      url = "https://dro.pm/fileman.php?secret=secret"
 
      if not os.path.isfile(path):
