@@ -60,9 +60,9 @@ python3 bot.py
 ## Windows
 ### Bước 1 tải:
 Tải [Python](https://www.python.org/ftp/python/3.13.5/python-3.13.5-amd64.exe) về VPS
-### Bước 2: 
+### Bước 2 tải repo, giải nén, tải Modules: 
 Tải [repo này dưới dạng zip[(https://github.com/assnssters/VPS-Bot/archive/refs/heads/main.zip) và giải nén ra thư mục, mở cmd ở đây hoặc mở cmd ( Run As Administrator) sau đó chạy ` cd <Thư mục vừa giải nén>/VPS-Bot-main `  và  `pip3 install -r requirements.txt`
-### Bước 3 Câu hình vào bot
+### Bước 3 Cấu hình vào bot:
 Edit cái bot.py và làm như bên Linux rồi save lại, sau đó ấn vào bot.py python để run
 
  ## CREDIT:
