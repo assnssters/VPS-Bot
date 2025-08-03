@@ -1,6 +1,6 @@
 ## HƯỚNG DẨN SỬ DỤNG VPS-BOT ĐỂ ĐIỀU KHIỂN BẰNG BOT TELEGRAM
 
-<p></p>
+
 ## Linux
 ### Bước 1 Tải các gói cần thiết:
  *  Debian, Ubuntu..
