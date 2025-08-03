@@ -19,13 +19,17 @@
 ### Bước 2 Clone repo này:
 
 ```bash
-git clone https://github.com/assnssters/VPS-Bot.git```
+git clone https://github.com/assnssters/VPS-Bot.git
+```
+
 
 ### Bước 3 cấu hình vào Bot:
+
 
 ```bash
 nano VPS-Bot/bot.py
 ```
+
 
 rồi tìm đến dòng thứ 3 `TOKEN` và thứ 4 `OWNER_ID`
 * Để TOKEN là TOKEN của BOT Telegram
