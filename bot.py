@@ -203,26 +203,27 @@ if platform.system() == "Windows":
             bot.reply_to(message, f"Lỗi khi chạy lệnh: {e}")
 
 
- @bot.message_handler(commands=['upload'])
- def upload(message):
-     path = message.text.replace('/upload ', '', 1).strip()
-     url = "https://dro.pm/fileman.php?secret=your_secret"
+    @bot.message_handler(commands=['upload'])
+    def upload(message):
+        path = message.text.replace('/upload ', '', 1).strip()
+        url = "https://dro.pm/fileman.php?secret=your_secret"
 
-     if not os.path.isfile(path):
-         return bot.reply_to(message, f" Không tìm thấy file: {path}")
+        if not os.path.isfile(path):
+            return bot.reply_to(message, f" Không tìm thấy file: {path}")
 
-     try:
-        with open(path, 'rb') as f:
-            files = {'f': f}
-            headers = {'User-Agent': 'cli'}
-            response = requests.post(url, files=files, headers=headers)
-            print(response.text)
-            result = response.text.split()[1]
-            bot.reply_to(message, f"Link: {result}")
-     except:
-           pass
+        try:
+           with open(path, 'rb') as f:
+               files = {'f': f}
+               headers = {'User-Agent': 'cli'}
+               response = requests.post(url, files=files, headers=headers)
+               print(response.text)
+               result = response.text.split()[1]
+               bot.reply_to(message, f"Link: {result}")
+        except:
+              pass
+
 
 if __name__ == '__main__':
     send_start()
-    print("✅ Started!")
+    print("Started!")
     bot.polling(none_stop=True)
