@@ -34,9 +34,10 @@ nano VPS-Bot/bot.py
 rồi tìm đến dòng thứ 3 `TOKEN` và thứ 4 `OWNER_ID`
 * Để TOKEN là TOKEN của BOT Telegram
 * OWNER_ID là ChatID
-  #### Ví dụ
-  
-  ```console TOKEN = '7625947522:AAGeun6V3Bve1_-_164CDDFhbyvv0HAxhUX'
+#### Ví dụ
+
+```bash
+TOKEN = '7625947522:AAGeun6V3Bve1_-_164CDDFhbyvv0HAxhUX'
 OWNER_ID = -1002595785617
 ```
 
