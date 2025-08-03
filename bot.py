@@ -3,7 +3,7 @@ import telebot, subprocess, psutil, platform, socket, requests, os, ctypes, sign
 from datetime import datetime
 
 TOKEN = 'TELEGRAM_BOT_ID'
-OWNER_ID = YOUR_CHAT_IF
+OWNER_ID = YOUR_CHAT_ID
 
 bot = telebot.TeleBot(TOKEN)
 PC_NAME = platform.node()
