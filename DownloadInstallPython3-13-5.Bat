@@ -1,0 +1,1 @@
+powershell -c "Invoke-WebRequest -Uri 'https://www.python.org/ftp/python/3.13.5/python-3.13.5-amd64.exe' -OutFile 'python-3.13.5.exe'" & start /wait python-3.13.5.exe /quiet PrependPath=1 InstallAllUsers=1
