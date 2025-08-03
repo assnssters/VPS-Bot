@@ -103,8 +103,10 @@ if platform.system() == "Linux":
 
  @bot.message_handler(commands=['upload'])
  def upload(message):
-     path = message.text.replace('/upload ', '', 1).strip()
-     url = "https://dro.pm/fileman.php?secret=your_secret"
+     full = message.text.replace('/upload ', '', 1).strip()
+     path = full.split()[-1]
+     secret = result = response.text.split()[1]
+     url = "https://dro.pm/fileman.php?secret=secret"
 
      if not os.path.isfile(path):
          return bot.reply_to(message, f" Không tìm thấy file: {path}")
