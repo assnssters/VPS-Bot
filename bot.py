@@ -35,8 +35,8 @@ if platform.system() == "Linux":
          "/tasklist - Hiển thị Process đang chạy\n"
          "/taskls - tasklist mà nhỏ hơn\n"
          "/pcinfo - xem thông tin máy\n"
-         "cmd - chạy lệnh\n"
-         "cfk - pkg quản lý cơ bản\n"
+         "/cmd - chạy lệnh\n"
+         "/cfk - pkg quản lý cơ bản\n"
          "/upload - upload file lên\n"
      )
      bot.reply_to(message, help_text)
@@ -140,7 +140,7 @@ if platform.system() == "Windows":
             "/taskls - tasklist mà nhỏ hơn\n"
             "/pcinfo - xem thông tin máy\n"
             "/cmd - chạy lệnh\n"
-            "cfk - pkg quản lý cơ bản"
+            "/cfk - pkg quản lý cơ bản"
             "/upload - upload file lên"
         )
         bot.reply_to(message, help_text)
