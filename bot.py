@@ -154,7 +154,7 @@ elif platform.system() == "Windows":
         if is_old_message(message): return
         try:
             command = message.text.replace('/cmd ', '', 1)
-            result = subprocess.getoutput(f"powershell.exe -Command \"{command}\"")
+            result = subprocess.getoutput(f"cmd /c \"{command}\"")
             bot.reply_to(message, f'Kết quả:\n{result[:4000]}')
         except:
             bot.reply_to(message, "Lỗi")
