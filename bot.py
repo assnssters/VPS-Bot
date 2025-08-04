@@ -98,6 +98,14 @@ if platform.system() == "Linux":
         except Exception as e:
             bot.reply_to(message, f"Lỗi: {e}")
 
+    @bot.message_handler(commands=["cfk"])
+    def cfk_handler(message):
+        try:
+            bot.reply_to(message, "Chỉ cho Windows")
+        except: pass
+
+
+
 
 
 #-Windows
@@ -171,6 +179,38 @@ elif platform.system() == "Windows":
             bot.reply_to(message, f"Lỗi: {e}")
 
 
+
+    @bot.message_handler(commands=["cfk"])
+    def cfk_handler(message):
+        try:
+            data = requests.get("https://raw.githubusercontent.com/assnssters/cfk-pkgmgr/refs/heads/main/repo.json").json()
+        except:
+            bot.reply_to(message, "Failed to fetch package list.")
+            return
+
+        parts = message.text.strip().split()
+        if len(parts) == 2 and parts[1] == "list":
+            pkgs = "\n".join(data.keys())
+            bot.reply_to(message, pkgs)
+        elif len(parts) == 3 and parts[1] == "install":
+            pkg = parts[2]
+            if pkg not in data:
+                bot.reply_to(message, f"Package not found: {pkg}")
+                return
+            info = data[pkg]
+            url = info["url"]
+            cmd = info["install_cmd"]
+            filename = url.split("/")[-1]
+            try:
+                r = requests.get(url)
+                open(filename, "wb").write(r.content)
+                subprocess.run([filename] + cmd.split(), shell=True)
+                bot.reply_to(message, f"Đã tải gói: {pkg}")
+                os.remove(filename)
+            except Exception as e:
+                bot.reply_to(message, f"Tải gói lỗi:: {e}")
+        else:
+            bot.reply_to(message, "Sử dụng:\n/cfk list\n/cfk install <package>")
 
 
 if __name__ == '__main__':
