@@ -1,7 +1,12 @@
 # HƯỚNG DẨN SỬ DỤNG VPS-BOT ĐỂ ĐIỀU KHIỂN BẰNG BOT TELEGRAM
 
-
-
+## Sử dụng
+* /tasklist : List tác vụ đang chạy
+* /taskls : tasklist lite
+* /pcinfo : hiển thị thông tin máy ( CPU RAM, Tên Máy, IP Pub)
+* /cmd <lệnh> : chạy lệnh cmd
+* /upload <đường dẩn file> : upload file trên máy lên Telegram
+* /cfk : package manager coe bản ( Windows Only )
 
 ## Tải
 ### Linux
