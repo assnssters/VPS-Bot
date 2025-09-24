@@ -88,13 +88,13 @@ if platform.system() == "Linux":
                 return
             file_path = message.text.replace('/upload', '', 1).strip()
             if not file_path:
-                bot.reply_to(message, "⚠️ Vui lòng cung cấp đường dẫn file để tải lên, ví dụ: `/upload results.txt`")
+                bot.reply_to(message, "Vui lòng cung cấp đường dẫn file để tải lên, ví dụ: `/upload results.txt`")
                 return
             if not os.path.exists(file_path):
-                bot.reply_to(message, f"❌ Không tìm thấy file: `{file_path}`")
+                bot.reply_to(message, f"Không thấy file: `{file_path}`")
                 return
             with open(file_path, 'rb') as doc:
-                bot.send_document(message.chat.id, doc, caption=f"✅ File đã tải lên từ:\n`{file_path}`")
+                bot.send_document(message.chat.id, doc, caption=f" File đã tải lên từ:\n`{file_path}`")
         except Exception as e:
             bot.reply_to(message, f"Lỗi: {e}")
 
@@ -168,13 +168,13 @@ elif platform.system() == "Windows":
                 return
             file_path = message.text.replace('/upload', '', 1).strip()
             if not file_path:
-                bot.reply_to(message, "⚠️ Vui lòng cung cấp đường dẫn file để tải lên, ví dụ: `/upload results.txt`")
+                bot.reply_to(message, "Chịu, Vui lòng cung cấp đường dẫn file để tải lên, ví dụ: `/upload results.txt`")
                 return
             if not os.path.exists(file_path):
-                bot.reply_to(message, f"❌ Không tìm thấy file: `{file_path}`")
+                bot.reply_to(message, f"Không thấy file: `{file_path}`")
                 return
             with open(file_path, 'rb') as doc:
-                bot.send_document(message.chat.id, doc, caption=f"✅ File đã tải lên từ:\n`{file_path}`")
+                bot.send_document(message.chat.id, doc, caption=f" File đã tải lên từ:\n`{file_path}`")
         except Exception as e:
             bot.reply_to(message, f"Lỗi: {e}")
 
@@ -199,12 +199,13 @@ elif platform.system() == "Windows":
                 return
             info = data[pkg]
             url = info["url"]
+            startcmd = info["go"]
             cmd = info["install_cmd"]
             filename = url.split("/")[-1]
             try:
                 r = requests.get(url)
                 open(filename, "wb").write(r.content)
-                subprocess.run([filename] + cmd.split(), shell=True)
+                subprocess.run([go] + [filename] + cmd.split(), shell=True)
                 bot.reply_to(message, f"Đã tải gói: {pkg}")
                 os.remove(filename)
             except Exception as e:
@@ -215,5 +216,5 @@ elif platform.system() == "Windows":
 
 if __name__ == '__main__':
     send_start_message()
-    print("✅ Started!")
+    print("Yooo Started!")
     bot.polling(none_stop=True)
